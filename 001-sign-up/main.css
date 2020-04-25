@@ -1,0 +1,105 @@
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  --padding-unit: 0.5rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background: #000; */
+  background-color: #ededed;
+  background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23000000' fill-opacity='0.71'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  text-align: center;
+}
+.centered {
+  padding: var(--padding-unit);
+  background: #eee;
+  border-radius: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  /* max-width: none; */
+  /* width: 100%; */
+  padding: 10px;
+  border: 2px solid #555;
+  -webkit-box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+}
+.container:before {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 100%;
+  vertical-align: middle;
+}
+.header {
+  padding: var(--padding-unit);
+}
+.register-form > div {
+  padding: calc(2 * var(--padding-unit)) var(--padding-unit);
+}
+
+.register-form > div:not(.submit) {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+form label {
+  padding-bottom: calc(0.5 * var(--padding-unit));
+}
+
+form input {
+  /* margin: 15px 0; */
+  padding: calc(1 * var(--padding-unit));
+  width: 100%;
+  outline: none;
+  border: 0.5px solid #555;
+  border-radius: 8px;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -ms-transition: 0.2s ease all;
+  -o-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+}
+
+@media (min-width: 640px) {
+  .centered {
+    max-width: 500px;
+    width: 100%;
+  }
+}
+@media (min-width: 720px) {
+  .centered {
+    max-width: 600px;
+    width: 100%;
+  }
+}
+@media (min-width: 800px) {
+  .centered {
+    max-width: 720px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .centered {
+    max-width: 768px;
+    width: 100%;
+  }
+}
